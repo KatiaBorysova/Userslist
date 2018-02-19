@@ -94,7 +94,8 @@ function setSearchListener(response, selector) {
 function startSearch(response) {
     $('table.table').show();
     $('h1.no-results-message').remove();
-    var searchTerm = $('input#search').val();
+    var searchTerm = $('input#search').val().trim();
+    
     if (searchTerm == '') {
         iterateThroughResponse(response);
     }
